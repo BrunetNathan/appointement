@@ -13,6 +13,9 @@
 #action_endpoint:
 #  url: "http://localhost:5055/webhook"
 
+action_endpoint:
+  actions_module: actions
+
 # Tracker store which is used to store the conversations.
 # By default the conversations are stored in memory.
 # https://rasa.com/docs/rasa-pro/production/tracker-stores
@@ -40,3 +43,15 @@
 #  username: username
 #  password: password
 #  queue: queue
+
+nlg:
+  type: rephrase
+  llm:
+    model_group: rasa_command_generation_model
+
+model_groups:
+  - id: rasa_command_generation_model
+    models:
+      - provider: rasa
+        model: rasa/cmd_gen_codellama_13b_calm_demo
+        api_base: "https://tutorial-llm.rasa.ai"

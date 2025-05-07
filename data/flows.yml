@@ -1,0 +1,13 @@
+version: "3.1"
+flows:
+  take_medical_appointement:
+    description: Help the user taking an apointement.
+    steps:
+      - collect: first_name
+      - collect: last_name
+      - action: utter_goodbye
+# flows:
+#   hello_world:
+#     description: A simple flow that greets the user
+#     steps:
+#       - action: utter_greet
