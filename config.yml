@@ -33,12 +33,20 @@ language: en
 #     threshold: 0.3
 #     ambiguity_threshold: 0.1
 
+# pipeline:
+#   - name: SingleStepLLMCommandGenerator
+#     llm:
+#       model_group: rasa_command_generation_model
+#     flow_retrieval:
+#       active: false  # explicitly disable this
+
 pipeline:
-  - name: SingleStepLLMCommandGenerator
+  - name: CompactLLMCommandGenerator
     llm:
-      model_group: rasa_command_generation_model
+      model_group: openai_embeddings
     flow_retrieval:
-      active: false  # explicitly disable this
+      active: false
+
 # pipeline:
 # - name: SingleStepLLMCommandGenerator
 #   llm:
