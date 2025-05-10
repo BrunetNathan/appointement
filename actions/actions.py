@@ -26,7 +26,7 @@ class ActionShowAvailability(Action):
             response += f"{doctor['name']} is available :\n"
             for day in doctor['availability']:
                 response += f"{day['day']} between {day['time'].split('-')[0]} and {day['time'].split('-')[1]}\n"
-        dispatcher.utter_message(text="Here are the availabilities for next week :\n " + response)
+        dispatcher.utter_message(text="Here are the availabilities for next week :\n" + response)
         return []
 
 #

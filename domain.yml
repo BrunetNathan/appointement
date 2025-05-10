@@ -21,6 +21,22 @@ slots:
     type: text
     mappings:
       - type: from_llm
+  doctor:
+    type: text
+    mappings:
+      - type: from_llm
+  time:
+    type: text
+    mappings:
+      - type: from_llm
+  day:
+    type: text
+    mappings:
+      - type: controlled
+  hour:
+    type: text
+    mappings:
+      - type: controlled
   availability:
     type: text
     mappings:
@@ -41,7 +57,7 @@ responses:
   - text: "Great, carry on!"
 
   utter_goodbye:
-  - text: "Bye {first_name} {last_name}"
+  - text: "Bye {first_name} {last_name}, Dr {doctor}, {time}"
 
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
@@ -51,6 +67,12 @@ responses:
 
   utter_ask_last_name:
   - text: "What is your last name ?"
+
+  utter_ask_doctor:
+  - text: "Which doctor would you like to make an appointment with ?"
+
+  utter_ask_time:
+  - text: "What day and time would you like an appointment ?"
 
 session_config:
   session_expiration_time: 60
