@@ -9,6 +9,7 @@ flows:
       - action: action_show_availability
       - collect: doctor
       - collect: time
+      - action: action_parse_time
       - action: utter_goodbye
 
 

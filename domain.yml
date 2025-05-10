@@ -11,6 +11,8 @@ intents:
 
 actions: 
   - action_show_availability
+  - action_parse_time
+  - action_check_availability
 
 slots:
   first_name:
@@ -57,7 +59,7 @@ responses:
   - text: "Great, carry on!"
 
   utter_goodbye:
-  - text: "Bye {first_name} {last_name}, Dr {doctor}, {time}"
+  - text: "Bye {first_name} {last_name},{doctor}, {time} | {day} {hour}"
 
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
