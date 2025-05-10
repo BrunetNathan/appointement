@@ -5,6 +5,7 @@ flows:
     steps:
       - action: utter_greet
       - collect: first_name
-      - collect: last_name
+      - collect: last_name 
+      - action: action_show_availability
       - action: utter_goodbye
 

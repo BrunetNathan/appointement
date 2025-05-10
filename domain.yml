@@ -9,6 +9,9 @@ intents:
   - mood_unhappy
   - bot_challenge
 
+actions: 
+  - action_show_availability
+
 slots:
   first_name:
     type: text
@@ -18,10 +21,14 @@ slots:
     type: text
     mappings:
       - type: from_llm
+  availability:
+    type: text
+    mappings:
+      - type : controlled
 
 responses:
   utter_greet:
-  - text: "Hey! How are you ?"
+  - text: "Hey! I will help you find an apointement."
 
   utter_cheer_up:
   - text: "Here is something to cheer you up:"
