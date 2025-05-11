@@ -59,7 +59,7 @@ slots:
 
 responses:
   utter_greet:
-  - text: "Hey! I will help you find an apointement."
+  - text: "Hey! I will help you find an appointement."
 
   utter_cheer_up:
   - text: "Here is something to cheer you up:"
@@ -72,8 +72,7 @@ responses:
   - text: "Great, carry on!"
 
   utter_goodbye:
-  - text: "Bye {first_name} {last_name},{doctor}, {time} | {day} {hour} | confirmation : {final_confirmation} | email {email}"
-
+  - text: "Bye \nFirst name : {first_name}  Last name :{last_name}\nDoctor : {doctor} | day : {day} hour : {hour} \nfinal_confirmation : {final_confirmation}" 
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
   

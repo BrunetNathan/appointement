@@ -6,7 +6,7 @@ flows:
       - action: utter_greet
       - collect: first_name
       - collect: last_name
-      - collect: email
+      #- collect: email
       - id: show_availability      
         action: action_show_availability
       - collect: doctor
